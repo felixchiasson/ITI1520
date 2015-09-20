@@ -3,7 +3,7 @@
 #     File Name           :     d1q2.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 16:36]
-#     Last Modified       :     [2015-09-19 23:06]
+#     Last Modified       :     [2015-09-19 23:07]
 #     Description         :     Calcule le nombre minimal de pièce de monnaie 
 #                               nécessaire pour une valeur en $ donnée.
 ################################################################################
@@ -28,7 +28,7 @@ while not positif:
             nbDimes = qMod // 0.10
             dMod = round(qMod, 2) % 0.10    # round() est utilisé afin d'éviter
                                             # les cas où le modulo est 0.199 
-                                            # où l'on obtiendrai 1 pièce 
+                                            # où l'on obtiendrais 1 pièce 
                                             # de moins que la vraie réponse
 
             nbNickels = dMod // 0.05
