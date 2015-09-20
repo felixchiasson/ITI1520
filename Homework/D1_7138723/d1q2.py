@@ -3,7 +3,7 @@
 #     File Name           :     d1q2.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 16:36]
-#     Last Modified       :     [2015-09-19 23:01]
+#     Last Modified       :     [2015-09-19 23:06]
 #     Description         :     Calcule le nombre minimal de pièce de monnaie 
 #                               nécessaire pour une valeur en $ donnée.
 ################################################################################
@@ -15,6 +15,7 @@ while not positif:
     except ValueError:
         print("Veuillez entrer une valeur numérique.")
     except KeyboardInterrupt:
+        print("\nAurevoir...")
         sys.exit()
     else:
 
