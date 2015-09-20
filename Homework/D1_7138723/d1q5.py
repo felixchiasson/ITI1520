@@ -3,7 +3,7 @@
 #     File Name           :     d1q5.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 21:09]
-#     Last Modified       :     [2015-09-19 23:00]
+#     Last Modified       :     [2015-09-19 23:13]
 #     Description         :     Convertit une valeur en année-lumière en
 #                               secondes et en distance et compare la distance
 #                               entre deux étoiles données en année-lumière.
@@ -36,8 +36,8 @@ while not positif:
             print("La distance est: {0:.1f}km".format(distance))
             positif = True
         else:
-            print("Il est impossible de de retourner dans le temps. "\
-                    "Veuillez réessayer.")
+            print("Un nombre négatif? Venez-vous de découvrir comment "\
+                    "voyager dans le temps!? Veuillez réessayer.")
     except ValueError:
         print("Veuillez entrer une valeur numérique.")
 
