@@ -3,13 +3,13 @@
 #     File Name           :     d1q3.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 15:21]
-#     Last Modified       :     [2015-09-19 21:02]
+#     Last Modified       :     [2015-09-19 23:00]
 #     Description         :     Converts pounds and ounces to kilograms
 ################################################################################
 import sys
 
-def imperialToMetric(lbs, oz):
-    return lbs*0.453592 + oz*0.0283495
+def imperialToMetric(lbs, oz):          # Définir une fonction pour convertir
+    return lbs*0.453592 + oz*0.0283495  # en kilogrammes
 
 positif = False
 while not positif:
@@ -19,8 +19,8 @@ while not positif:
     except ValueError:
         print("Vous n'avez pas entré une valeur numérique pour l'une des deux"\
                 " options")
-        positif = False
     except KeyboardInterrupt:
+        print("\nAurevoir...")
         sys.exit()
     else:
         if pounds < 0 or ounces < 0:

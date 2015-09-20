@@ -3,20 +3,20 @@
 #     File Name           :     d1q5.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 21:09]
-#     Last Modified       :     [2015-09-19 22:31]
+#     Last Modified       :     [2015-09-19 23:00]
 #     Description         :     Convertit une valeur en année-lumière en
 #                               secondes et en distance et compare la distance
 #                               entre deux étoiles données en année-lumière.
 ###############################################################################
 import sys
 
-def convSecondes(a):
-        return a * 365.26 * 86400
+def convSecondes(a):                        # Convertit années-lumières en
+        return a * 365.26 * 86400           # secondes
 
-def convKm(s):
-        return s * 300000
+def convKm(s):                              # Convertit secondes-lumières en
+        return s * 300000                   # kilomètres
 
-def calcDist(e, f):
+def calcDist(e, f):                         # Trouve la distance entre e et f
     if e > f:
         return convKm(convSecondes(e)) - convKm(convSecondes(f))
     else:
@@ -45,6 +45,8 @@ while not positif:
         print("\nAurevoir...")
         sys.exit()
 
+# Deuxième while loop afin de permettre au code de recommencer de cette étape
+# si l'utilisateur entre un mauvais caractère [a-zA-Z] ou une valeur négative
 while not s:
     try:
         etoileA = float(input("Entrez la distance de la première étoile, en "\

@@ -3,14 +3,14 @@
 #     File Name           :     d1q4.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 16:36]
-#     Last Modified       :     [2015-09-19 20:59]
+#     Last Modified       :     [2015-09-19 22:55]
 #     Description         :     Calcule le nombre minimal de pièce de monnaie 
 #                               nécessaire pour une valeur en $ donnée.
 ################################################################################
 import sys
 
-def piecesMin(amount):
-    qM = amount % 0.25
+def piecesMin(amount):                  # Fonction qui calcule le nombre
+    qM = amount % 0.25                  # minimal de pièces nécessaires
     nbQ = amount // 0.25i
 
     nbD = qM // 0.10
@@ -32,6 +32,7 @@ while not positif:
         print("Veuillez entrer une valeur numérique.")
         positif = False
     except KeyboardInterrupt:
+        print("\nAurevoir...")
         sys.exit()
     else:
 
