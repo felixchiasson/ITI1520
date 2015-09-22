@@ -3,7 +3,7 @@
 #     File Name           :     d1q4.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 16:36]
-#     Last Modified       :     [2015-09-19 22:55]
+#     Last Modified       :     [2015-09-22 13:55]
 #     Description         :     Calcule le nombre minimal de pièce de monnaie 
 #                               nécessaire pour une valeur en $ donnée.
 ################################################################################
@@ -11,7 +11,7 @@ import sys
 
 def piecesMin(amount):                  # Fonction qui calcule le nombre
     qM = amount % 0.25                  # minimal de pièces nécessaires
-    nbQ = amount // 0.25i
+    nbQ = amount // 0.25
 
     nbD = qM // 0.10
     dM = round(qM, 2) % 0.10
@@ -30,7 +30,6 @@ while not positif:
         montant = float(input('Entrez le montant en dollars: '))
     except ValueError:
         print("Veuillez entrer une valeur numérique.")
-        positif = False
     except KeyboardInterrupt:
         print("\nAurevoir...")
         sys.exit()
@@ -41,6 +40,6 @@ while not positif:
         else:
             nbMin = piecesMin(montant)
             print("Le caissier aura besoin d'un minimum de {0:.0f}"\
-                    "pièces.".format(nbMin))
+                    " pièces.".format(nbMin))
             positif = True
 
