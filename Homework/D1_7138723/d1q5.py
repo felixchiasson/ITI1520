@@ -3,7 +3,7 @@
 #     File Name           :     d1q5.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 21:09]
-#     Last Modified       :     [2015-09-19 23:13]
+#     Last Modified       :     [2015-09-25 16:07]
 #     Description         :     Convertit une valeur en année-lumière en
 #                               secondes et en distance et compare la distance
 #                               entre deux étoiles données en année-lumière.
@@ -17,10 +17,7 @@ def convKm(s):                              # Convertit secondes-lumières en
         return s * 300000                   # kilomètres
 
 def calcDist(e, f):                         # Trouve la distance entre e et f
-    if e > f:
-        return convKm(convSecondes(e)) - convKm(convSecondes(f))
-    else:
-        return convKm(convSecondes(f)) - convKm(convSecondes(e))
+        return convKm(convSecondes(e)) + convKm(convSecondes(f))
 
 positif = False
 s = False
