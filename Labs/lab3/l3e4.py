@@ -3,7 +3,7 @@
 #     File Name           :     l3e4.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-29 12:19]
-#     Last Modified       :     [2015-09-29 12:32]
+#     Last Modified       :     [2015-09-29 14:28]
 #     Description         :     Détermine le nombre de racine réelles pour
 #                               une equation
 ###############################################################################
@@ -12,7 +12,7 @@ def nbRacines(a, b, c):
     discriminant = round(discriminant)
     if discriminant == 0:
         racines = 1
-    elif discriminant >= 0:
+    elif discriminant > 0:
         racines = 2
     else:
         racines = 0
