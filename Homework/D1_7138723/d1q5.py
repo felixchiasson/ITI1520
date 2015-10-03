@@ -3,7 +3,7 @@
 #     File Name           :     d1q5.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-09-19 21:09]
-#     Last Modified       :     [2015-09-25 16:07]
+#     Last Modified       :     [2015-10-03 10:40]
 #     Description         :     Convertit une valeur en année-lumière en
 #                               secondes et en distance et compare la distance
 #                               entre deux étoiles données en année-lumière.
@@ -42,8 +42,10 @@ while not positif:
         print("\nAurevoir...")
         sys.exit()
 
-# Deuxième while loop afin de permettre au code de recommencer de cette étape
-# si l'utilisateur entre un mauvais caractère [a-zA-Z] ou une valeur négative
+# Another while loop should the user enter illegal characters [a-zA-Z] or a
+# negative value while doing this step. Only having one big loop would force
+# the user to start from the beginning.
+
 while not s:
     try:
         etoileA = float(input("Entrez la distance de la première étoile, en "\
