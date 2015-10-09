@@ -3,7 +3,7 @@
 #     File Name           :     d2q1.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-09 16:05]
-#     Last Modified       :     [2015-10-09 16:41]
+#     Last Modified       :     [2015-10-09 16:45]
 #     Description         :     Calculer l'indice de masse corporelle 
 ###############################################################################
 import sys
@@ -28,9 +28,9 @@ while not positif:
     try:
         poids = float(input("Veuillez entrer votre poids en kilogrammmes: "))
         taille = float(input("Veuillez entrer votre taille en mètres: "))
+
         if poids <= 0 or taille <= 0:
-            print('\033[91m' + "Veuillez entrer un nombre positif " 
-                    "non nul" + "\033[0m")
+            print("Veuillez entrer un nombre positif non nul")
 
         else:
             bmi = calculBMI(poids, taille)
@@ -39,7 +39,7 @@ while not positif:
             positif = True      # La boucle arrête
 
     except ValueError:       # Si l'utilisateur entre une lettre ou un symbol 
-        print("\033[91m" + "Vous avez entré un caractère illégal!\033[0m")
+        print("Vous avez entré un caractère illégal!")
     except KeyboardInterrupt:   # Si l'utilisateur arrête avec ^C
         print("\nAurevoir...!")
         sys.exit()
