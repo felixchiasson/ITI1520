@@ -3,7 +3,7 @@
 #     File Name           :     d2q3.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-11 10:56]
-#     Last Modified       :     [2015-10-11 13:03]
+#     Last Modified       :     [2015-10-11 13:13]
 #     Description         :     Outil d'apprentissage de multiplications et
 #                               d'addition
 ###############################################################################
@@ -38,8 +38,8 @@ def jeuAM(c):
 
 ############# Jeu #############
     typeOp = operators[op]          # Takes the value of "op" as the key and 
-                                    # returns the assigned function (.add or
-                                    # .mul) and assigns it to typeOp.
+                                    # returns the assigned function (add() or
+                                    # mul()) and assigns it to typeOp.
     for i in range(0, 10):
         # Assign a random int value between 0 and 9 to a and b.
         a = randint(0, 9)
