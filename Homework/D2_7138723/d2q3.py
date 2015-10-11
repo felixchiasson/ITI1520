@@ -3,7 +3,7 @@
 #     File Name           :     d2q3.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-11 10:56]
-#     Last Modified       :     [2015-10-11 12:24]
+#     Last Modified       :     [2015-10-11 12:59]
 #     Description         :     Outil d'apprentissage de multiplications et
 #                               d'addition
 ###############################################################################
@@ -64,10 +64,13 @@ def jeuAM(c):
 
 # Initialize bonne as False and do not stop the loop until bonne is True
 bonne = False
+print("Ce logiciel va tester votre connaissance des opérations d'addition et "
+        "de multiplication. \nVeuillez choisir entre 0) Addition et "
+        "1) Multiplication (0 ou 1)")
 while not bonne:
 # Run code and do something else if the program runs into a specified exception
     try:  
-        choice = int(input("0 = add, 1 = mult... "))
+        choice = int(input())
         bonne = jeuAM(choice)
 
         if type(bonne) is bool:     # If bonne is a boolean
@@ -78,7 +81,7 @@ while not bonne:
             print(bonne, "réponses correctes. \nDemandez à votre enseignant(e)" 
             " pour vous aider.")
             break                   # Forces loop to stop. Otherwise when bonne
-                                    # = 0, the program keeps looping.
+                                    # = 0 (False), the program keeps looping.
 
     except ValueError:              # If user inputs non numerical value
         print("Je n'ai pas bien compris votre choix...")
