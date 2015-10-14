@@ -3,7 +3,7 @@
 #     File Name           :     d2q3.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-11 10:56]
-#     Last Modified       :     [2015-10-12 16:49]
+#     Last Modified       :     [2015-10-14 12:14]
 #     Description         :     Outil d'apprentissage de multiplications et
 #                               d'addition
 ###############################################################################
@@ -15,7 +15,7 @@ from random import randint
 def jeuAM(c):
 
     ############# Initialisation des variables locales ###############
-    
+
     operators = {"+": operator.add,     # Dictionnary used with the operator
                  "*": operator.mul}     # module. Saves us a few lines later on
     correct = 0
@@ -31,13 +31,13 @@ def jeuAM(c):
             op = "*"
             choix = True
         else:
-            print("Je n'ai pas bien compris votre choix. Veuillez choisir entre" 
-            " l'option 0 ou 1. ")
+            print("Je n'ai pas bien compris votre choix. Veuillez choisir entre"
+                    " l'option 0 ou 1. ")
             # Returns a boolean value (here: False). This will be used later on.
             return choix
 
     ############# Jeu #############
-    typeOp = operators[op]          # Takes the value of "op" as the key and 
+    typeOp = operators[op]          # Takes the value of "op" as the key and
                                     # returns the assigned function (add() or
                                     # mul()) and assigns it to typeOp.
     for i in range(0, 10):
@@ -74,7 +74,7 @@ print("Ce logiciel va tester votre connaissance des opérations d'addition et "
         "1) Multiplication (0 ou 1)")
 while not bonne:
 # Run code and do something else if the program runs into a specified exception
-    
+
     try:
         choice = int(input())
         bonne = jeuAM(choice)
@@ -84,7 +84,7 @@ while not bonne:
         elif bonne > 6:
             print(bonne, "réponses correctes. \nFélicitations!")
         else:
-            print(bonne, "réponse(s) correcte(s). \nDemandez à votre " 
+            print(bonne, "réponse(s) correcte(s). \nDemandez à votre "
             "enseignant(e) pour vous aider.")
             break                   # Forces loop to stop. Otherwise when bonne
                                     # = 0 (False), the program keeps looping.
@@ -95,6 +95,3 @@ while not bonne:
     except KeyboardInterrupt:       # If user exits with ^C
         print("\nAurevoir!")
         sys.exit()
-
-
-
