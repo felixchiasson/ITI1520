@@ -3,8 +3,8 @@
 #     File Name           :     l4e2.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-06 11:35]
-#     Last Modified       :     [2015-10-09 17:04]
-#     Description         :     Print numbers from a to b  
+#     Last Modified       :     [2015-10-14 12:21]
+#     Description         :     Print numbers from a to b
 ###############################################################################
 import sys
 

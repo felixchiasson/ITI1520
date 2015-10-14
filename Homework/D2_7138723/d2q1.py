@@ -3,8 +3,8 @@
 #     File Name           :     d2q1.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-09 16:05]
-#     Last Modified       :     [2015-10-09 16:45]
-#     Description         :     Calculer l'indice de masse corporelle 
+#     Last Modified       :     [2015-10-14 12:21]
+#     Description         :     Calculer l'indice de masse corporelle
 ###############################################################################
 import sys
 
@@ -38,7 +38,7 @@ while not positif:
             idealW(bmi)
             positif = True      # La boucle arrête
 
-    except ValueError:       # Si l'utilisateur entre une lettre ou un symbol 
+    except ValueError:       # Si l'utilisateur entre une lettre ou un symbol
         print("Vous avez entré un caractère illégal!")
     except KeyboardInterrupt:   # Si l'utilisateur arrête avec ^C
         print("\nAurevoir...!")
