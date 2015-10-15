@@ -3,14 +3,14 @@
 #     File Name           :     d2q3.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-11 10:56]
-#     Last Modified       :     [2015-10-14 12:14]
+#     Last Modified       :     [2015-10-14 21:39]
 #     Description         :     Outil d'apprentissage de multiplications et
 #                               d'addition
 ###############################################################################
 import sys
 import operator
-
 from random import randint
+
 
 def jeuAM(c):
 
@@ -19,7 +19,9 @@ def jeuAM(c):
     operators = {"+": operator.add,     # Dictionnary used with the operator
                  "*": operator.mul}     # module. Saves us a few lines later on
     correct = 0
+
     ############# Choix de l'utilisateur #############
+
     choix = False
     while not choix:
         if c == 0:
@@ -37,6 +39,7 @@ def jeuAM(c):
             return choix
 
     ############# Jeu #############
+
     typeOp = operators[op]          # Takes the value of "op" as the key and
                                     # returns the assigned function (add() or
                                     # mul()) and assigns it to typeOp.
@@ -54,6 +57,7 @@ def jeuAM(c):
                 correct = correct + 1
             else:
                 print("Incorrect - la réponse est", real)
+
         except ValueError:      # si la réponse n'est pas un chiffre
             print("Incorrect - la réponse est", real)
         except KeyboardInterrupt:
@@ -69,9 +73,11 @@ def jeuAM(c):
 
 # Initialize bonne as False and do not stop the loop until bonne is True
 bonne = False
+
 print("Ce logiciel va tester votre connaissance des opérations d'addition et "
         "de multiplication. \nVeuillez choisir entre 0) Addition et "
         "1) Multiplication (0 ou 1)")
+
 while not bonne:
 # Run code and do something else if the program runs into a specified exception
 
@@ -85,7 +91,7 @@ while not bonne:
             print(bonne, "réponses correctes. \nFélicitations!")
         else:
             print(bonne, "réponse(s) correcte(s). \nDemandez à votre "
-            "enseignant(e) pour vous aider.")
+                  "enseignant(e) pour vous aider.")
             break                   # Forces loop to stop. Otherwise when bonne
                                     # = 0 (False), the program keeps looping.
 
