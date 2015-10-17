@@ -3,7 +3,7 @@
 #     File Name           :     d2q4.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-14 12:31]
-#     Last Modified       :     [2015-10-14 21:51]
+#     Last Modified       :     [2015-10-17 10:37]
 #     Description         :     Test l'utilisateur avec 10 problèmes
 #                               arithmétiques aléatoirement distribués entre
 #                               additions et multiplications.
@@ -14,7 +14,13 @@ from random import randint
 
 
 def randomOp(n):
-    """Generate an arithmetic problem with a given operator."""
+    """
+
+    (int) -> bool
+    Generates an arithmetic problem with a given operator.
+    Restrictions: n == 1 or 0
+
+    """
 
     a = randint(0,9)
     b = randint(0,9)
@@ -23,7 +29,7 @@ def randomOp(n):
         if n == 0:
             print(a, '+', b, '=', end=' ')      # End print statement with
             real = a + b                        # a white space to make the
-            uAnswer = int(input())              # input prettier.
+            uAnswer = int(input())              # input fit on the same line.
 
             if uAnswer == real:
                 return True

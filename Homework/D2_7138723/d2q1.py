@@ -3,17 +3,29 @@
 #     File Name           :     d2q1.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-09 16:05]
-#     Last Modified       :     [2015-10-14 12:21]
+#     Last Modified       :     [2015-10-17 10:47]
 #     Description         :     Calculer l'indice de masse corporelle
 ###############################################################################
 import sys
 
 def calculBMI(w, h):
-    "Retourne l'indice de masse corporelle avec le poids et la hauteur"
+    """
+
+    (float, float) -> float
+    Retourne l'indice de masse corporelle avec le poids et la hauteur
+    Restrictions: w, h >= 0
+
+    """
     return w / (h * h)
 
 def idealW(weight):
-    "Retourne un message basé sur la valeur de weight."
+    """
+
+    (float) -> None
+    Retourne un message basé sur la valeur de weight.
+    Restriction: weight must be a bmi value
+
+    """
     if weight < 18.5:
         print("Maigreur!")
     elif 18.5 <= weight < 25.0:

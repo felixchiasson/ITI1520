@@ -3,7 +3,7 @@
 #     File Name           :     d2q3.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-11 10:56]
-#     Last Modified       :     [2015-10-14 21:39]
+#     Last Modified       :     [2015-10-17 10:40]
 #     Description         :     Outil d'apprentissage de multiplications et
 #                               d'addition
 ###############################################################################
@@ -13,7 +13,13 @@ from random import randint
 
 
 def jeuAM(c):
+    """
+    (int) -> (bool or int)
+    Generates 10 random addition or multiplication problems based on the
+    parameter.
+    Restrictions: c must be 0 or 1
 
+    """
     ############# Initialisation des variables locales ###############
 
     operators = {"+": operator.add,     # Dictionnary used with the operator
