@@ -3,7 +3,7 @@
 #     File Name           :     d3q1.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-19 16:21]
-#     Last Modified       :     [2015-10-19 16:47]
+#     Last Modified       :     [2015-10-19 16:58]
 #     Description         :     Counts the number of positive values in a list
 ################################################################################
 import sys
@@ -23,9 +23,11 @@ def countPos(L):
     return counter
 
 s = False
+
+print("Veuillez entrer la liste de valeurs: ")
+
 while not s:
 
-    print("Veuillez entrer la liste de valeurs: ")
     try:
 # .split(',') removes commas and spaces between each elements of the list.
         liste = [int(x) for x in input().split(',')]
