@@ -1,12 +1,12 @@
 #! /usr/bin/env python3
-################################################################################
+###############################################################################
 #     File Name           :     d3q2.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-19 16:49]
 #     Last Modified       :     [2015-10-19 17:03]
 #     Description         :     Returns a bolean if all elements of a list are
 #                               positive.
-################################################################################
+###############################################################################
 import sys
 
 
@@ -23,7 +23,7 @@ def countPos(L):
             counter += 1
         else:
             continue
-    if counter  > 0:
+    if counter > 0:
         return True
     else:
         return False
@@ -35,8 +35,8 @@ print("Veuillez entrer une liste de valeurs: ")
 
 while not s:
     try:
-# .split(',') strips commas and whitespaces from the input converted to an int.
-# the input is the converted into a list for use in countPos()
+        # .split(',') splits each comma-separated input
+        # The input is then converted into a list for use in countPos()
         liste = [int(x) for x in input().split(',')]
         positif = countPos(liste)
         print(positif)
