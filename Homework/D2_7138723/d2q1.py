@@ -3,10 +3,11 @@
 #     File Name           :     d2q1.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-09 16:05]
-#     Last Modified       :     [2015-10-17 10:47]
+#     Last Modified       :     [2015-10-27 15:57]
 #     Description         :     Calculer l'indice de masse corporelle
 ###############################################################################
 import sys
+
 
 def calculBMI(w, h):
     """
@@ -17,6 +18,7 @@ def calculBMI(w, h):
 
     """
     return w / (h * h)
+
 
 def idealW(weight):
     """
@@ -55,4 +57,3 @@ while not positif:
     except KeyboardInterrupt:   # Si l'utilisateur arrête avec ^C
         print("\nAurevoir...!")
         sys.exit()
-

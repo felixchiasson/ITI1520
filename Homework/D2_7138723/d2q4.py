@@ -1,13 +1,13 @@
 #! /usr/bin/env python3
-################################################################################
+###############################################################################
 #     File Name           :     d2q4.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-14 12:31]
-#     Last Modified       :     [2015-10-17 10:37]
+#     Last Modified       :     [2015-10-27 16:23]
 #     Description         :     Test l'utilisateur avec 10 problèmes
 #                               arithmétiques aléatoirement distribués entre
 #                               additions et multiplications.
-################################################################################
+###############################################################################
 import sys
 
 from random import randint
@@ -22,8 +22,8 @@ def randomOp(n):
 
     """
 
-    a = randint(0,9)
-    b = randint(0,9)
+    a = randint(0, 9)
+    b = randint(0, 9)
 
     try:
         if n == 0:
@@ -62,11 +62,11 @@ def randomOp(n):
 bonne = 0
 
 print("Ce logiciel va vous demander de répondre à 10 questions d'additions et "
-        "de multiplications...")
+      "de multiplications...")
 
-for i in range(0,10):
+for i in range(0, 10):
 
-    op = randint(0,1)
+    op = randint(0, 1)
     correct = randomOp(op)
 
     if correct is True:
