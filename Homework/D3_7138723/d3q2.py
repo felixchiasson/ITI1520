@@ -3,14 +3,14 @@
 #     File Name           :     d3q2.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-19 16:49]
-#     Last Modified       :     [2015-10-28 09:29]
+#     Last Modified       :     [2015-10-28 14:21]
 #     Description         :     Returns a bolean if all elements of a list are
 #                               positive.
 ###############################################################################
 import sys
 
 
-def countPos(L):
+def count_pos(L):
     """
     (list) -> bool
     Counts the number of negative values in a list and returns True if all
@@ -31,14 +31,14 @@ def countPos(L):
 
 s = False
 
-print("Veuillez entrer une liste de valeurs: ")
+print("Veuillez entrer une liste de valeurs séparée par des virgules: ")
 
 while not s:
     try:
         # .split(',') splits each comma-separated input
         # The input is then converted into a list for use in countPos()
         liste = [int(x) for x in input().split(',')]
-        positif = countPos(liste)
+        positif = count_pos(liste)
         print(positif)
         s = True
 

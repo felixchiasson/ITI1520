@@ -3,19 +3,19 @@
 #     File Name           :     d3q3.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-28 09:07]
-#     Last Modified       :     [2015-10-28 14:14]
+#     Last Modified       :     [2015-10-28 14:23]
 #     Description         :     Changes the order of elements in a list
 ###############################################################################
 import sys
 
 
-def reverseL(L):
+def reverse_list(L):
     index = 0
-    lenL = len(L)
-    while index < lenL:
-        L.append(L[(lenL-1)-index])
+    len_list = len(L)
+    while index < len_list:
+        L.append(L[(len_list-1)-index])
         index += 1
-    del L[0:lenL]
+    del L[0:len_list]
 
 
 s = False
@@ -25,7 +25,7 @@ print("Veuillez entrer des nombres séparés par des virgules.")
 while not s:
     try:
         liste = [int(i) for i in input().split(',')]
-        reverseL(liste)
+        reverse_list(liste)
         print(liste)
         s = True
     except ValueError:
