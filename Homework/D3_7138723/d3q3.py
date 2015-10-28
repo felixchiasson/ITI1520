@@ -3,7 +3,7 @@
 #     File Name           :     d3q3.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-28 09:07]
-#     Last Modified       :     [2015-10-28 10:35]
+#     Last Modified       :     [2015-10-28 14:14]
 #     Description         :     Changes the order of elements in a list
 ###############################################################################
 import sys
@@ -19,6 +19,8 @@ def reverseL(L):
 
 
 s = False
+
+print("Veuillez entrer des nombres séparés par des virgules.")
 
 while not s:
     try:
