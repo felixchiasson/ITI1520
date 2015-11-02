@@ -3,7 +3,7 @@
 #     File Name           :     d3q5.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-28 14:38]
-#     Last Modified       :     [2015-11-01 21:58]
+#     Last Modified       :     [2015-11-01 22:51]
 #     Description         :     Count number of votes
 ###############################################################################
 
@@ -16,7 +16,7 @@ def vote_pourcentage(string):
     (str) -> int
     Counts the total number of 'oui', 'abstention', and the total of words in
     a given string.
-    Requirements: string must contain at least one 'oui' or one 'non'.
+    Restrictions: string must contain at least one 'oui' or one 'non'.
 
     """
 
