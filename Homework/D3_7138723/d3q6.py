@@ -3,7 +3,7 @@
 #     File Name           :     d3q6.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-11-01 18:37]
-#     Last Modified       :     [2015-11-01 19:27]
+#     Last Modified       :     [2015-11-01 22:11]
 #     Description         :     Convert roman numeral to arabic numerals
 ###############################################################################
 
@@ -11,7 +11,12 @@ import sys
 
 
 def romaine_v1(string):
-
+    """
+    (str) -> int
+    Converts roman numerals to arabic numerals using string methods.
+    Restrictions: string must consist of M, D, C, X, V, and/or I. Otherwise it
+    will return 0 (which is to be expected anyway).
+    """
     string = string.strip()
     string = string.lower()
 
@@ -26,6 +31,12 @@ def romaine_v1(string):
 
 
 def romaine_v2(string):
+    """
+    (str) -> (bool or int)
+    Converts roman numerals to arabic numerals without using string methods.
+    Restrictions: String must strictly consist of any one of M, D, C, X, V, and
+    I. Anything else (such as trailing whitespaces) will return False.
+    """
 
     total = 0
 
@@ -66,11 +77,10 @@ while not s:
             s = True
 
         else:
-            raise ValueError
+            print("Veuillez entrer uen combinaison de M, D, C, X, V et I sans"
+                  " espaces à la fin.")
 
-    except ValueError:
-        print('Veuillez entrer une combinaison de M, D, C, X, V et I sans'
-              ' espaces à la fin.')
+    # If user exits early with ^C
     except KeyboardInterrupt:
         print('\n...Aurevoir!')
         sys.exit()

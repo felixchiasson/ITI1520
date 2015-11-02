@@ -3,7 +3,7 @@
 #     File Name           :     d3q5.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-28 14:38]
-#     Last Modified       :     [2015-11-01 21:51]
+#     Last Modified       :     [2015-11-01 21:58]
 #     Description         :     Count number of votes
 ###############################################################################
 
@@ -11,6 +11,14 @@ import sys
 
 
 def vote_pourcentage(string):
+    """
+
+    (str) -> int
+    Counts the total number of 'oui', 'abstention', and the total of words in
+    a given string.
+    Requirements: string must contain at least one 'oui' or one 'non'.
+
+    """
 
     total_yes = 0
     total_votes = 0
@@ -41,6 +49,8 @@ while not s:
         vote_count = input()
         percentage_of_votes = vote_pourcentage(vote_count)
 
+    # The function returns ZeroDivisionError if there are no 'oui' or 'non'
+    # in the string.
     except ZeroDivisionError:
         print("Personne n'a voté. La motion ne passe pas.")
         s = True
