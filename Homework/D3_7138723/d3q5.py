@@ -3,7 +3,7 @@
 #     File Name           :     d3q5.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-28 14:38]
-#     Last Modified       :     [2015-11-01 19:28]
+#     Last Modified       :     [2015-11-01 21:51]
 #     Description         :     Count number of votes
 ###############################################################################
 
@@ -33,13 +33,22 @@ def vote_pourcentage(string):
 
 s = False
 
+print("Entrez les votes (oui, non, abstention) séprarés par des "
+      "espaces.")
+
 while not s:
     try:
-        print("Entrez les votes (oui, non, abstention) séprarés par des "
-              "espaces.")
         vote_count = input()
         percentage_of_votes = vote_pourcentage(vote_count)
 
+    except ZeroDivisionError:
+        print("Personne n'a voté. La motion ne passe pas.")
+        s = True
+    except KeyboardInterrupt:
+        print('\n...Aurevoir!')
+        sys.exit()
+
+    else:
         if percentage_of_votes == 100:
             print('Unanimité')
         elif percentage_of_votes < 100 and percentage_of_votes >= ((2/3)*100):
@@ -48,10 +57,5 @@ while not s:
             print('Majorité simple')
         else:
             print('La motion ne passe pas')
+
         s = True
-    except ZeroDivisionError:
-        print("Personne n'a voté. La motion ne passe pas.")
-        s = True
-    except KeyboardInterrupt:
-        print('\n...Aurevoir!')
-        sys.exit()
