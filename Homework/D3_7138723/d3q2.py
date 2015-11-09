@@ -3,7 +3,7 @@
 #     File Name           :     d3q2.py
 #     Created By          :     Félix Chiasson (7138723)
 #     Creation Date       :     [2015-10-19 16:49]
-#     Last Modified       :     [2015-11-01 22:41]
+#     Last Modified       :     [2015-11-09 17:08]
 #     Description         :     Returns a bolean if all elements of a list are
 #                               positive.
 ###############################################################################
@@ -17,17 +17,12 @@ def count_pos(L):
     elements of L are positive.
     Restriction: L must be a list with numbers in it
     """
-    counter = 0
     for i in L:
         if i <= 0:
-            counter += 1
-            print(i)
+            return False
         else:
             continue
-    if counter > 0:
-        return False
-    else:
-        return True
+    return True
 
 s = False
 
